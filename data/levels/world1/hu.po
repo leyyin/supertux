@@ -5,8 +5,8 @@
 # Translators:
 # D. J. S. <djsossz@freemail.hu>, 2012
 # Norbert Molnár <buzitetu@indamail.hu>, 2013
-# Gyönki Bendegúz <gyonkibendeguz@gmail.com>, 2013
-# Gyönki Bendegúz <gyonkibendeguz@gmail.com>, 2014
+# Bendegúz Gyönki <gyonkibendeguz@gmail.com>, 2013
+# Bendegúz Gyönki <gyonkibendeguz@gmail.com>, 2014
 #  Kővágó Zoltán <DirtY.iCE.hu@gmail.com>, 2006
 # Kővágó, Zoltán <DirtY.iCE.hu@gmail.com>, 2013
 # Kristóf Kófiás <kristof.kofias@gmail.com>, 2014

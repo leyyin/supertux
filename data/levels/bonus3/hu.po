@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Norbert Molnár <buzitetu@indamail.hu>, 2013
-# Gyönki Bendegúz <gyonkibendeguz@gmail.com>, 2013
+# Bendegúz Gyönki <gyonkibendeguz@gmail.com>, 2013
 # Kristóf Kófiás <kristof.kofias@gmail.com>, 2014
 # Tibor Buzási, 2015
 msgid ""

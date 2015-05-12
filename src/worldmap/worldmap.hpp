@@ -158,7 +158,7 @@ public:
    */
   int tile_data_at(Vector pos);
 
-  size_t level_count();
+  size_t level_count() const;
   size_t solved_level_count();
 
   /**
@@ -170,7 +170,7 @@ public:
   /** returns current Tux incarnation */
   Tux* get_tux() { return tux.get(); }
 
-  Savegame& get_savegame() { return m_savegame; }
+  Savegame& get_savegame() const { return m_savegame; }
 
   LevelTile* at_level();
   SpecialTile* at_special_tile();
@@ -227,8 +227,7 @@ public:
   void set_levels_solved(bool solved, bool perfect);
 
 private:
-  void get_level_title(LevelTile& level);
-  void get_level_target_time(LevelTile& level);
+  void load_level_information(LevelTile& level);
   void draw_status(DrawingContext& context);
   void calculate_total_stats();
 
@@ -238,7 +237,6 @@ private:
   Vector get_camera_pos_for_tux();
   void clamp_camera_position(Vector& c);
   Vector last_position;
-  float last_target_time;
 
 private:
   WorldMap(const WorldMap&);

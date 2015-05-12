@@ -6,7 +6,7 @@
 # chris020891 <chris020891@gmail.com>, 2014
 # D. J. S. <djsossz@freemail.hu>, 2012
 # Norbert Molnár <buzitetu@indamail.hu>, 2013
-# Gyönki Bendegúz <gyonkibendeguz@gmail.com>, 2014
+# Bendegúz Gyönki <gyonkibendeguz@gmail.com>, 2014
 #  Kővágó Zoltán <DirtY.iCE.hu@gmail.com>, 2006
 # Kristóf Kófiás <kristof.kofias@gmail.com>, 2014
 # Norbert Molnár <buzitetu@indamail.hu>, 2014

@@ -751,6 +751,9 @@
       1990 1991 3061 3065
       1992 1993 3062 3066
       1994 1995 3063 3067
+      3285 3286 0    0
+      3287 3288 0    0
+      3289 3290 0    0
     )
   )
   (tilegroup
@@ -821,8 +824,6 @@
       3259 3260 0    0
       3269 3270 0    0
       3271 3272 0    0
-      3273 3274 0    0
-      3275 3276 0    0
      )
   )
   (tilegroup
@@ -4410,18 +4411,6 @@
     (width 2)
     (height 2)
     (ids
-      3273 3274 3275 3276
-    )
-    (attributes
-      0 0
-      0 0 
-    )
-    (image "tiles/castle/swall.png")
-  )
-  (tiles
-    (width 2)
-    (height 2)
-    (ids
       3277 3278 3279 3280
     )
     (attributes
@@ -4442,5 +4431,15 @@
     )
     (image "tiles/castle/grey7.png")
   )
-  ;; next-id: 3285
+(tiles
+    (width 2)
+    (height 3)
+    (ids
+     3285 3286 
+     3287 3288
+     3289 3290
+    )
+    (image "tiles/doodads/tux-statue.png")
+  )
+  ;; next-id: 3290
   )

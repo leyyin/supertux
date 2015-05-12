@@ -17,6 +17,8 @@
 
 #include <config.h>
 
+#include <algorithm>
+#include <iostream>
 #include <sstream>
 #include <stdlib.h>
 #include <string.h>
@@ -87,7 +89,8 @@ void
 Font::loadFontFile(const std::string &filename)
 {
   lisp::Parser parser;
-  log_debug << "Loading font: " << filename << std::endl;
+  // FIXME: Workaround for a crash on MSYS2 when starting with --debug
+  log_debug_ << "Loading font: " << filename << std::endl;
   const lisp::Lisp* root = parser.parse(filename);
   const lisp::Lisp* config_l = root->get_lisp("supertux-font");
 
@@ -204,7 +207,7 @@ Font::loadFontSurface(
       Glyph glyph;
       glyph.surface_idx   = surface_idx;
 
-      if( glyph_width_ == FIXED || isdigit(*chr) )
+      if( glyph_width_ == FIXED || (*chr >= 0 && *chr <= 255 && isdigit(*chr)) )
       {
         glyph.rect    = Rectf(x, y, x + char_width, y + char_height);
         glyph.offset  = Vector(0, 0);
