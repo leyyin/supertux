@@ -16,6 +16,7 @@
 #define MyAppURL "http://supertux.lethargik.org"
 #define MyAppExeName "supertux2.exe"
 #define RootDir "..\.."
+#define DependencyDir "..\..\dependencies32"
 #define BuildDir "..\..\Release"
 #define DllSourceDir "C:\msys\1.0\build\supertux"
 
@@ -73,16 +74,16 @@ Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 
 [Files]
-Source: vcredist_x86.exe; DestDir: {tmp}; Flags: deleteafterinstall
+Source: {#DependencyDir}\vcredist_x86.exe; DestDir: {tmp}; Flags: deleteafterinstall
 Source: {#BuildDir}\supertux2.exe; DestDir: {app}; Flags: ignoreversion
 Source: {#RootDir}\LICENSE; DestDir: {app}; Flags: ignoreversion
 Source: {#RootDir}\README.md; DestDir: {app}; Flags: ignoreversion
 Source: {#RootDir}\INSTALL.md; DestDir: {app}; Flags: ignoreversion
-Source: {#RootDir}\WHATSNEW.txt; DestDir: {app}; Flags: ignoreversion
+Source: {#RootDir}\NEWS.md; DestDir: {app}; Flags: ignoreversion
 Source: {#BuildDir}\*.dll; DestDir: {app}; Flags: ignoreversion
 Source: {#BuildDir}\*.pem; DestDir: {app}\data; Flags: ignoreversion
 Source: {#RootDir}\data\*; DestDir: {app}\data; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: {#RootDir}\dependencies\licenses\*; DestDir: {app}\licenses; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: {#DependencyDir}\licenses\*; DestDir: {app}\licenses; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: {#MyAppName}.ico; DestDir: {app}; Flags: ignoreversion
 
 [Icons]

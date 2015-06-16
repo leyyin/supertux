@@ -14,45 +14,33 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef HEADER_SUPERTUX_OBJECT_GRADIENT_HPP
-#define HEADER_SUPERTUX_OBJECT_GRADIENT_HPP
+#ifndef HEADER_SUPERTUX_SUPERTUX_FADEIN_HPP
+#define HEADER_SUPERTUX_SUPERTUX_FADEIN_HPP
 
-#include "supertux/game_object.hpp"
-#include "util/reader_fwd.hpp"
-#include "video/drawing_context.hpp"
+#include "supertux/screen_fade.hpp"
+#include "video/color.hpp"
 
-class DisplayManager;
-
-class Gradient : public GameObject
+/**
+ * Fades a screen towards a specific color
+ */
+class FadeIn : public ScreenFade
 {
 public:
-  Gradient();
-  Gradient(const Reader& reader);
-  virtual ~Gradient();
-
-  void set_gradient(Color top, Color bottom);
-
-  Color get_gradient_top() const
-  { return gradient_top; }
-
-  Color get_gradient_bottom() const
-  { return gradient_bottom; }
-
-  GradientDirection get_gradient_direction() const
-  { return gradient_direction; }
+  FadeIn(float fade_time, Color dest_color = Color(0, 0, 0));
+  virtual ~FadeIn();
 
   virtual void update(float elapsed_time);
-
   virtual void draw(DrawingContext& context);
 
+  /// returns true if the effect is completed
+  virtual bool done();
+
 private:
-  int layer;
-  Color gradient_top;
-  Color gradient_bottom;
-  GradientDirection gradient_direction;
-  Rectf gradient_region;
+  Color color;
+  float fade_time;
+  float accum_time;
 };
 
-#endif /*SUPERTUX_BACKGROUND_H*/
+#endif
 
 /* EOF */
